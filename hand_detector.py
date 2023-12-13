@@ -17,8 +17,6 @@ class HandDetector():
         if hand_detection.multi_hand_landmarks:
             for hands in hand_detection.multi_hand_landmarks:
                 #Calcular el centro
-                #self.central_x = int((hands.landmark[self.mp_hands.HandLandmark.WRIST].x + hands.landmark[self.mp_hands.HandLandmark.THUMB_TIP].x) / 2 * img.shape[1])
-                #self.central_y = int((hands.landmark[self.mp_hands.HandLandmark.WRIST].y + hands.landmark[self.mp_hands.HandLandmark.THUMB_TIP].y) / 2 * img.shape[0])
                 self.central_x = int(hands.landmark[self.mp_hands.HandLandmark.INDEX_FINGER_TIP].x * img.shape[1])
                 self.central_y = int(hands.landmark[self.mp_hands.HandLandmark.INDEX_FINGER_TIP].y * img.shape[0])
 
